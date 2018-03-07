@@ -1,6 +1,6 @@
 [project]
-title = My project
-version = 0.1
+title = DefTable
+version = 1.0
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -18,4 +18,7 @@ scale = 0.02
 
 [script]
 shared_state = 1
+
+[library]
+include_dirs = DefTable
 
