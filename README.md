@@ -3,9 +3,9 @@
 A Defold Asset library that contains a whole bunch of useful table manipulation functions split across two files:
 
 * list_utils.lua
- * Focused around the manipulation of numerically indexed tables. ie. "list-like" tables
+    * Focused around the manipulation of numerically indexed tables. ie. "list-like" tables
 * hash_utils.lua
- * Focused around the manipulation of key indexed tables. ie. "hash-like" tables
+    * Focused around the manipulation of key indexed tables. ie. "hash-like" tables
 
 ## Installation
 
