@@ -9,11 +9,13 @@ A Defold Asset library that contains a whole bunch of useful table manipulation 
 
 You can use DefTable in your own project by adding this project as a Defold library dependency. Open your game.project file and in the dependencies field under project add:
 
-https://github.com/subsoap/defmath/archive/master.zip
+http://www.defold.com/p/35206/101529/archive
 
 Once added you may require either (or both) of the two main lua
 
+```
 local list_utils = require("deftable.list_utils")
+```
 
 ## List of Functions
 ### List Like Tables
