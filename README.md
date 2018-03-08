@@ -26,7 +26,7 @@ local list_utils = require("deftable.list_utils")
 ```
 local i, success = index_of(element, list)
 ```
-Returns the the index of _element_ in _list_ and _true_ if _element_ is in _list_, or _nil_ and _false_ otherwise.
+Returns the the index of _element_, and _true_, if _element_ is in _list_. Returns _nil_ and _false_ otherwise.
 
 #### for_each
 ```
@@ -39,7 +39,7 @@ Calls _func(element, index)_ for every element in _list_.
 local new_list = map(func, list)
 ```
 
-Calls _func(element)_ on every element in _list_ returning a new list-like table containing the first return value from each call of _func_, excluding _nil_ return values.
+Calls _func(element)_ for every element in _list_ returning a new list-like table containing the first return value from each call of _func_, excluding _nil_ return values.
 
 #### fold_left
 ```
@@ -57,13 +57,13 @@ Calls _func(accumulator, element)_ for each element in _list_ adding the first r
 ```
 local filtered_list = filter(predicate, list)
 ```
-Returns a new list-like table containing all the elements of _list_ for which _predicate(element)_ returns true.
+Returns a new list-like table containing all the elements of _list_ for which _predicate(element)_ returns _true_.
 
 #### partition
 ```
 local hits, misses = partition(predicate, list)
 ```
-Returns two new list-like tables containing; first, all the elements of _list_ for which _predicate(element)_ returns true; second, all elements of _list_ for which _predicate(element)_ returns false.
+Returns two new list-like tables; the first containing all the elements of _list_ for which _predicate(element)_ returns _true_; the second containing all elements of _list_ for which _predicate(element)_ returns _false_.
 
 #### zip
 ```
@@ -81,7 +81,7 @@ Returns a new list-like table where each element has a key of _list1[i]_ and a v
 ```
 local success = all(predicate, list)
 ```
-Calls _predicate(element)_ for each value in _list_ returning _true_ only if _predicate(element)_ returns true for __every__ element in _list_. Otherwise returns false.
+Calls _predicate(element)_ for each value in _list_ returning _true_ only if _predicate(element)_ returns true for __every__ element in _list_. Otherwise returns _false_.
 
 #### any
 ```
@@ -124,7 +124,7 @@ Returns the product of every element in _list_, assumes elements in _list_ can b
 ```
 local key = key_of(value, hash)
 ```
-Returns the key matching _value_ in _hash_.
+Returns the key of the element whose value matches _value_ in _hash_.
 
 #### index_of
 ```
@@ -156,19 +156,19 @@ Calls _func(key, value, accumulator)_ for every key and value in _hash_. Sets _a
 ```
 local filtered_hash = filter(predicate, hash)
 ```
-Returns a new hash-like table containing all the elements of _list_ for which _predicate(element)_ returns true.
+Returns a new hash-like table containing all the elements of _list_ for which _predicate(element)_ returns _true_.
 
 #### partition
 ```
 local hits, misses = partition(predicate, hash)
 ```
-Returns two new hash-like tables containing; first, all the elements of _hash_ for which _predicate(element)_ returns true; second, all elements of _hash_ for which _predicate(element)_ returns false.
+Returns two new hash-like tables; the first containing all the elements of _hash_ for which _predicate(element)_ returns true; the second containing all elements of _hash_ for which _predicate(element)_ returns _false_.
 
 #### all
 ```
 local success = all(predicate, hash)
 ```
-Calls _predicate(key, value)_ for each value in _hash_ returning _true_ only if _predicate(key, value)_ returns true for __every__ element in _hash_. Otherwise returns false.
+Calls _predicate(key, value)_ for each value in _hash_ returning _true_ only if _predicate(key, value)_ returns true for __every__ element in _hash_. Otherwise returns _false_.
 
 #### any
 ```
@@ -180,13 +180,13 @@ Calls _predicate(key, value)_ for each value in _hash_ returning _true_ if _pred
 ```
 local success = is_key(wanted, hash)
 ```
-Returns true if _wanted_ occurs as a key in _hash_.  Otherwise returns false.
+Returns true if _wanted_ occurs as a key in _hash_.  Otherwise returns _false_.
 
 #### is_value
 ```
 local success = is_value(wanted, hash)
 ```
-Returns true if _wanted_ occurs as a value in _hash_.  Otherwise returns false.
+Returns true if _wanted_ occurs as a value in _hash_.  Otherwise returns _false_.
 
 #### keys
 ```
